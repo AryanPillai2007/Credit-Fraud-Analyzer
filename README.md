@@ -1,4 +1,4 @@
-# ISM_Fraud_Detection
+# Credit Fraud Analyzer (CSV Analysis)
 The primary goal of this project is to develop a comprehensive fraud detection system that enhances the security and trustworthiness of financial transactions.
 
 Importing the required libraries is the first step of the script, including matplotlib, numpy, pandas, seaborn, imblearn, and sklearn components. 
