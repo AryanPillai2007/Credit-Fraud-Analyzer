@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 import seaborn as sns
 from imblearn.under_sampling import RandomUnderSampler
@@ -8,12 +7,20 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-
-
 # First Portion
 
-df1 = pd.read_csv('/Users/aryanpillai2701/Downloads/final/creditcard.csv')
+df1 = pd.read_csv('/Users/aryanpillai2701/Library/On Disk/Files/Credit-Fraud-Analyzer/creditcard.csv')
 df1.head(5)
+
+count_classes = pd.Series(df1['Class']).value_counts(sort=True).sort_index()
+count_classes.plot(kind = 'bar', color=['#1f77b4', '#ff7f0e'])
+plt.title("Fraud class histogram")
+plt.xlabel("Class")
+plt.ylabel("Frequency")
+plt.yscale('log')  # Add this line
+plt.show()
+
+
 
 df1.describe()
 df1.duplicated().any()
@@ -29,19 +36,16 @@ df1.Class.value_counts()
 # taking a copy of data
 df2 = df1.copy()
 
-plt.figure(figsize=(15, 8))
-plt.plot(df2.index, df2["Time"])
-plt.xlabel("Transaction")
-plt.ylabel("Time elapsed between a transaction and the first transaction")
-plt.title("Distribution of Transaction Time")
+
+fig, ax = plt.subplots(figsize=(10,5))
+ax.set_facecolor('lightgray')
+ax.plot(df2.index, df2["Time"], color='red')
+ax.set_xlabel("Transaction")
+ax.set_ylabel("Time")
+ax.set_title("Distribution of Transaction Time")
+
 plt.show()
 
-plt.figure(figsize=(10, 5))
-plt.plot(df2.index, df2["Amount"])
-plt.xlabel("Transaction")
-plt.ylabel("Amount in USD")
-plt.title("Distribution of Transaction Amount (USD)")
-plt.show()
 
 corr = df2.corr()
 c = corr['Class'].sort_values(ascending=False)
@@ -117,7 +121,7 @@ print(classifcation_report_logistic)
 background_color = '#FFFFFF'
 color_palette=['#2769FE', '#FF5F57', '#4dad82', '#230F88', '#0E0330']
 
-df = pd.read_csv('/Users/aryanpillai2701/Downloads/final/creditcard.csv')
+df = pd.read_csv('/Users/aryanpillai2701/Library/On Disk/Files/Credit-Fraud-Analyzer/creditcard.csv')
 df.info()
 
 df.describe()
@@ -149,36 +153,6 @@ plt.ylabel('Amount')
 plt.legend(loc='upper right')
 
 plt.show()
-
-fraud['Time'].describe()
-normal['Time'].describe()
-
-num_plots = len(fraud.columns)
-num_cols = 6
-num_rows = num_plots // num_cols if num_plots % num_cols == 0 else num_plots // num_cols + 1
-
-fig = plt.figure(figsize=(20, num_rows * 4))
-fig.patch.set_facecolor(background_color)
-gs = fig.add_gridspec(num_rows, num_cols)
-axes = [fig.add_subplot(gs[i // num_cols, i % num_cols]) for i in range(num_plots)]
-
-for ax, column in zip(axes, fraud.columns):
-    sns.kdeplot(fraud[column], ax=ax, label='Fraud', fill=True, color=color_palette[0])
-    sns.kdeplot(normal[column], ax=ax, label='Normal', fill=True, color=color_palette[1])
-    # ax.set_title(column, fontweight='bold', fontfamily='serif')
-    ax.grid(color='#000000', linestyle=':', axis='y', zorder=0, dashes=(1, 5))
-    ax.set_facecolor(background_color)
-    for s in ["top", "right", "left"]:
-        ax.spines[s].set_visible(False)
-    ax.legend(loc='upper right', frameon=False)
-
-if num_plots % num_cols != 0:
-    for ax in axes[num_plots:]:
-        ax.set_visible(False)
-
-plt.tight_layout()
-plt.show()
-
 
 fig, ax = plt.subplots(figsize=(10, 6))
 fig.patch.set_facecolor(background_color)
@@ -223,32 +197,4 @@ for spine in ['top', 'right', 'left', 'bottom']:
 plt.show()
 
 
-
-fraud = new_df[new_df['Class'] == 1]
-normal = new_df[new_df['Class'] == 0]
-
-num_plots = len(fraud.columns)
-num_cols = 6
-num_rows = num_plots // num_cols if num_plots % num_cols == 0 else num_plots // num_cols + 1
-
-fig = plt.figure(figsize=(20, num_rows * 4))
-fig.patch.set_facecolor(background_color)
-gs = fig.add_gridspec(num_rows, num_cols)
-axes = [fig.add_subplot(gs[i // num_cols, i % num_cols]) for i in range(num_plots)]
-
-for ax, column in zip(axes, fraud.columns):
-    sns.kdeplot(fraud[column], ax=ax, label='Fraud', fill=True, color=color_palette[0])
-    sns.kdeplot(normal[column], ax=ax, label='Normal', fill=True, color=color_palette[1])
-    ax.grid(color='#000000', linestyle=':', axis='y', zorder=0, dashes=(1, 5))
-    ax.set_facecolor(background_color)
-    for s in ["top", "right", "left"]:
-        ax.spines[s].set_visible(False)
-    ax.legend(loc='upper right', frameon=False)
-
-if num_plots % num_cols != 0:
-    for ax in axes[num_plots:]:
-        ax.set_visible(False)
-
-plt.tight_layout()
-plt.show()
 
