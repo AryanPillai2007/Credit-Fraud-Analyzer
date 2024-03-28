@@ -13,7 +13,7 @@ TTL = 24 * 60 * 60
 # Load the data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('/Users/aryanpillai2701/Library/On Disk/Files/Credit-Fraud-Analyzer/creditcard.csv')
+    df = pd.read_csv('data/creditcard.csv')
     return df
 
 # Create the app
