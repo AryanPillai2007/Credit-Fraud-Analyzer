@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import streamlit as st
 
-st.image("https://streamlit.io/images/brand/streamlit-mark-color.png", width=78)
+st.image("logo.png", width=78)
 
 # Load the data
 @st.cache_data
