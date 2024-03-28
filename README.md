@@ -1,9 +1,10 @@
 # Credit Fraud Analyzer.
 
-## Overview.
+## Overview
 This Streamlit application analyzes credit card transaction data to detect fraudulent activity. It has features for data loading, exploration, feature analysis, data preprocessing, undersampling to correct class imbalance, model training and evaluation, and data visualization.
 
-## Features: **Data Loading and Exploration** Read a CSV file containing credit card transaction data into a pandas DataFrame. Create histograms that show the class distribution in the data (fraudulent vs. non-fraudulent transactions). Check for and remove any duplicate entries from the DataFrame.
+## Features: 
+- **Data Loading and Exploration** Read a CSV file containing credit card transaction data into a pandas DataFrame. Create histograms that show the class distribution in the data (fraudulent vs. non-fraudulent transactions). Check for and remove any duplicate entries from the DataFrame.
   
 - **Feature analysis:** Plot the distribution of transaction time and compute the correlation between each attribute and the goal variable 'Class'. Create scatter plots of the features 'V11' and 'V17' against time for fraudulent and non-fraudulent transactions.
 
