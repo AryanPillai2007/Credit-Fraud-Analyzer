@@ -17,7 +17,8 @@ def load_data():
 
 # Create the app
 def main():
-    st.image("logo.png", width=78), st.title("Credit Card Fraud Analysis")
+    st.image("logo.png", width=100)
+    st.title("Credit Card Fraud Analysis")
     st.write("## Main Purpose")
     st.write("In today's digital world, where online transactions and data exchange have become commonplace, the importance of solid cybersecurity protections and effective fraud detection systems cannot be overstated. As technology continues to advance, it has become increasingly challenging to safeguard sensitive data and financial transactions from bad actors who are constantly looking for new ways to exploit vulnerabilities in our systems.")
     st.write("According to a report by the Federal Trade Commission, Americans lost over $1.9 billion to fraud in 2019 alone, resulting in significant financial losses for businesses and individuals alike. This highlights the pressing need for a reliable fraud detection system to effectively identify fraudulent activity in real time, preventing financial losses and safeguarding sensitive information.")
