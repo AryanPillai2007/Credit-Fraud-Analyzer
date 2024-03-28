@@ -142,9 +142,6 @@ def main():
 
 
 
-
-
-
     st.title("Comprehensive Summary")
 
     st.header("Data Loading and Exploration")
