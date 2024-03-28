@@ -7,8 +7,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import streamlit as st
 
-st.image("logo.png", width=78)
-
 # Load the data
 @st.cache_data
 def load_data():
@@ -17,7 +15,6 @@ def load_data():
 
 # Create the app
 def main():
-    st.image("logo.png", width=100)
     st.title("Credit Card Fraud Analysis")
     st.write("## Main Purpose")
     st.write("In today's digital world, where online transactions and data exchange have become commonplace, the importance of solid cybersecurity protections and effective fraud detection systems cannot be overstated. As technology continues to advance, it has become increasingly challenging to safeguard sensitive data and financial transactions from bad actors who are constantly looking for new ways to exploit vulnerabilities in our systems.")
