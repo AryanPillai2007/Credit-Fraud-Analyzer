@@ -7,6 +7,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import streamlit as st
 
+st.set_page_config("Roadmap", "https://streamlit.io/favicon.svg")
+TTL = 24 * 60 * 60
+
 # Load the data
 @st.cache_data
 def load_data():
