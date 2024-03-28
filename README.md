@@ -1,4 +1,4 @@
-# Credit Fraud Analyzer.
+# Credit Fraud Analyzer
 
 ## Overview
 This Streamlit application analyzes credit card transaction data to detect fraudulent activity. It has features for data loading, exploration, feature analysis, data preprocessing, undersampling to correct class imbalance, model training and evaluation, and data visualization.
@@ -14,7 +14,7 @@ This Streamlit application analyzes credit card transaction data to detect fraud
 
 - **Model training and evaluation:** Separate the undersampled data into a training and test set. Train a Logistic Regression model on the training data and use it to predict the test data. Calculate and publish the model's assessment metrics, such as accuracy, F1 score, precision, and recall. Print a categorization report.
 
-- Data Visualization: Create several plots to show the distribution of the features and the target variable. To make these plots, use the Seaborn and Matplotlib packages. The plots include scatter plots comparing amounts in fraud and normal transactions, scatter plots comparing 'Time' against 'Amount' for both normal and fraud transactions, and Kernel Density Estimation (KDE) plots for each dataset feature.
+- **Data Visualization:** Create several plots to show the distribution of the features and the target variable. To make these plots, use the Seaborn and Matplotlib packages. The plots include scatter plots comparing amounts in fraud and normal transactions, scatter plots comparing 'Time' against 'Amount' for both normal and fraud transactions, and Kernel Density Estimation (KDE) plots for each dataset feature.
 
 ## Requirements
 - Python 3.6+
