@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-import seaborn as sns
 from imblearn.under_sampling import RandomUnderSampler
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, classification_report
