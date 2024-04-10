@@ -10,7 +10,7 @@ import streamlit as st
 # Load the data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('/Users/aryanpillai2701/creditcard.csv')
+    df = pd.read_csv('data/creditcard.csv')
     return df
 
 # Create the app
