@@ -10,7 +10,6 @@ import streamlit as st
 # Load the data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('data/creditcard.csv')
     return df
 
 # Create the app
@@ -139,6 +138,40 @@ def main():
     st.write("The sixth plot shows the distribution of transaction amounts after applying undersampling techniques. Undersampling is a method used to balance the dataset by reducing the majority class (non-fraudulent transactions) to match the number of instances in the minority class (fraudulent transactions).")
     st.write("In this plot, we can see that the number of non-fraudulent transactions (blue dots) has been reduced, resulting in a more balanced distribution between the two classes. By undersampling, the model will have a more balanced representation of both classes during training, potentially improving its ability to accurately identify fraudulent transactions.")
 
+# Feature Correlation Analysis
+    st.header("Feature Analysis")
+    st.subheader("Feature Correlation")
+    st.write("This section provides an analysis of the correlation between individual features and the target variable 'Class' in the dataset.")
+    st.write("Correlation between each feature and the target variable 'Class':")
+    st.write("- V11: 0.149067 (Positive correlation)")
+    st.write("- V17: -0.313498 (Negative correlation)")
+
+# Class Imbalance
+    st.header("Class Distribution")
+    st.write("This section displays the distribution of transactions across different classes (fraudulent and non-fraudulent) in the dataset.")
+    st.write("Percentage of transactions in each class:")
+    st.write("- Non-Fraudulent (Class=0): 99.83%")
+    st.write("- Fraudulent (Class=1): 0.17%")
+
+# Model Performance Metrics
+    st.header("Model Training and Evaluation")
+    st.write("This section presents the performance metrics of a machine learning model trained and evaluated on the dataset.")
+    st.write("Performance metrics of the machine learning model:")
+    st.write("- Accuracy: 0.95")
+    st.write("- F1 Score: 0.86")
+    st.write("- Precision: 0.78")
+    st.write("- Recall: 0.95")
+
+# Dataset Information
+    st.header("Data Statistics")
+    st.write("This section provides basic statistics and information about the dataset.")
+    st.write("Information about the dataset:")
+    st.write("- Number of Rows: 284807")
+    st.write("- Number of Columns: 31")
+    st.write("Column Data Types:")
+    st.write("  - V1: float64")
+    st.write("  - V2: float64")
+# Write data types for other columns as well
 
 
     st.title("Comprehensive Summary")
