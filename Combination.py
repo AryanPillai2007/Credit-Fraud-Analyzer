@@ -115,7 +115,6 @@ print("Classification Report:")
 print(classifcation_report_logistic)
 
 
-
 # Second Portion
 
 background_color = '#FFFFFF'
