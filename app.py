@@ -165,7 +165,7 @@ def main():
     st.write("- Precision: 0.78")
     st.write("- Recall: 0.95")
     
-    st.write("My model has an accuracy of 0.95, meaning that it properly classifies 95% of all transactions as either fraudulent or non-fraudulent. The F1 score of 0.86 demonstrates a well-balanced performance in terms of precision and recall. The model exhibits a high accuracy rate of 0.78 in correctly identifying fraudulent transactions, while also successfully capturing a substantial proportion of all real positive cases (fraudulent transactions) with a recall rate of 0.95. This indicates that the model successfully reduces the occurrence of incorrect positive results while keeping a high rate of identifying fraudulent activity, making it very suitable for practical fraud detection situations. This achieves my purpose for the project.")
+    st.write("My model has an accuracy of 0.95, meaning that it properly classifies 95% of all transactions as either fraudulent or non-fraudulent. The F1 score of 0.86 demonstrates a well-balanced performance in terms of precision and recall. The model exhibits a high accuracy rate of 0.78 in correctly identifying fraudulent transactions, while also successfully capturing a substantial proportion of all real positive cases (fraudulent transactions) with a recall rate of 0.95. This indicates that the model successfully reduces the occurrence of incorrect positive results while keeping a high rate of identifying fraudulent activity, making it very suitable for practical fraud detection situations. **This achieves my purpose for the project.**")
 
 # Dataset Information
     st.header("Data Statistics")
