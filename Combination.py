@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+import seaborn as sns
 from imblearn.under_sampling import RandomUnderSampler
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, classification_report
@@ -8,7 +9,7 @@ from sklearn.preprocessing import StandardScaler
 
 # First Portion
 
-df1 = pd.read_csv('/Users/aryanpillai2701/Library/On Disk/Files/Credit-Fraud-Analyzer/creditcard.csv')
+df1 = pd.read_csv('/Users/aryanpillai2701/creditcard.csv')
 df1.head(5)
 
 count_classes = pd.Series(df1['Class']).value_counts(sort=True).sort_index()
@@ -120,7 +121,7 @@ print(classifcation_report_logistic)
 background_color = '#FFFFFF'
 color_palette=['#2769FE', '#FF5F57', '#4dad82', '#230F88', '#0E0330']
 
-df = pd.read_csv('/Users/aryanpillai2701/Library/On Disk/Files/Credit-Fraud-Analyzer/creditcard.csv')
+df = pd.read_csv('/Users/aryanpillai2701/creditcard.csv')
 df.info()
 
 df.describe()
