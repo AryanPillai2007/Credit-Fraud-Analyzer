@@ -10,7 +10,7 @@ import streamlit as st
 # Load the data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('/Users/aryanpillai2701/creditcard.csv')
+    df = pd.read_csv('data/creditcard.csv')
     return df
 
 # Create the app
@@ -146,6 +146,7 @@ def main():
     st.write("Correlation between each feature and the target variable 'Class':")
     st.write("- V11: 0.149067 (Positive correlation)")
     st.write("- V17: -0.313498 (Negative correlation)")
+    st.write("These correlation coefficients (constant quantity) offer valuable insights into the connections between particular characteristics and the goal variable, 'Class', which indicates whether a transaction is fraudulent or non-fraudulent. The feature 'V11' has a positive correlation coefficient of 0.149067, indicating that as the values of 'V11' grow, the probability of a transaction being labeled as fraudulent also increases. In contrast, a correlation coefficient of -0.313498 for feature 'V17' suggests that as the values of 'V17' decrease, the likelihood of fraud increases. These correlations emphasize the possible predictive capability of these traits in detecting fraudulent transactions, with 'V11' exhibiting a positive correlation and 'V17' demonstrating a negative correlation with fraud.")
 
 # Class Imbalance
     st.header("Class Distribution")
@@ -162,6 +163,8 @@ def main():
     st.write("- F1 Score: 0.86")
     st.write("- Precision: 0.78")
     st.write("- Recall: 0.95")
+    
+    st.write("My model has an accuracy of 0.95, meaning that it properly classifies 95% of all transactions as either fraudulent or non-fraudulent. The F1 score of 0.86 demonstrates a well-balanced performance in terms of precision and recall. The model exhibits a high accuracy rate of 0.78 in correctly identifying fraudulent transactions, while also successfully capturing a substantial proportion of all real positive cases (fraudulent transactions) with a recall rate of 0.95. This indicates that the model successfully reduces the occurrence of incorrect positive results while keeping a high rate of identifying fraudulent activity, making it very suitable for practical fraud detection situations. This achieves my purpose for the project.")
 
 # Dataset Information
     st.header("Data Statistics")
@@ -169,9 +172,7 @@ def main():
     st.write("Information about the dataset:")
     st.write("- Number of Rows: 284807")
     st.write("- Number of Columns: 31")
-    st.write("Column Data Types:")
-    st.write("  - V1: float64")
-    st.write("  - V2: float64")
+    st.write("This statistic is demonstrated in the histogram above.")
 # Write data types for other columns as well
 
 
